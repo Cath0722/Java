@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class PassOrFail {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your grade: ");
+        int grade = scanner.nextInt();
+
+        if (grade >= 75) {
+            System.out.println("You passed.");
+        } else {
+            System.out.println("You failed.");
+        }
+
+        scanner.close();
+    }
+}
