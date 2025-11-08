@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class LoginUser {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String correctUser = "Admin";
+        String correctPassword = "abcd";
+
+        String enteredUser;
+        String enteredPassword;
+
+        while (true) {
+            System.out.print("Enter User: ");
+            enteredUser = sc.nextLine();
+
+            if (!enteredUser.equals(correctUser)) {
+                System.out.println("Incorrect User! Try Again.\n");
+                continue; 
+            }
+
+            System.out.print("Enter your Password: ");
+            enteredPassword = sc.nextLine();
+
+            if (!enteredPassword.equals(correctPassword)) {
+                System.out.println("Incorrect Password! Try Again.\n");
+                continue; 
+            }
+
+            System.out.println("Access Granted!!");
+            break;
+        }
+
+        sc.close();
+    }
+}
