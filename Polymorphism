@@ -1,0 +1,32 @@
+public class PolymorphismExample {
+
+    public static void main(String[] args) {
+        Animal a;  // parent reference
+
+        a = new Dog();   // Dog object
+        a.sound();       // Dog's version
+
+        a = new Cat();   // Cat object
+        a.sound();       // Cat's version
+    }
+}
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows.");
+    }
+}
